@@ -9,14 +9,15 @@
     background-color: rgba(53, 51, 51, 0.913);
     color: aliceblue;
     font-size: larger;
+    padding: 10px;
 }
 .header{
  color:aliceblue;
  margin: 50px 0 0 100px;
 }
 .image{
-    min-width: 95%;
     max-width: 95%;
+    max-height: 95%;
     border-radius: 5%;
 } 
 
@@ -60,4 +61,8 @@ body{
 .logo{
     max-width: 50px;
     max-height: 50px;
+}
+.center{
+    display: grid;
+    place-items: center;
 }

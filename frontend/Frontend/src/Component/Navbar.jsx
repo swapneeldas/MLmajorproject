@@ -10,7 +10,7 @@ const Navbar = () => {
           Predict
           </NavLink>
       <NavLink to={'/info'} className={({isActive}) =>` ${isActive ? "Ractive" : "R"}`}>
-          info
+          Info
           </NavLink>
       <NavLink to={'/about'} className={({isActive}) =>` ${isActive ? "Ractive" : "R"}`}>
           About Us
