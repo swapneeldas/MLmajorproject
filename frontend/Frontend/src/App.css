@@ -29,8 +29,7 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background-color: blue;
-    border-radius: 0 0 30px 30px;
+    background-color: rgba(39, 39, 161, 0.379);
 }
 .rightSide{
     display: flex;
@@ -65,4 +64,5 @@ body{
 .center{
     display: grid;
     place-items: center;
+    margin: 0;
 }

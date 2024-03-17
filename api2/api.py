@@ -9,7 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 import tensorflow as tf
 # from tensorflow.keras.preprocessing import image
-Model=tf.keras.models.load_model("../Models/Models/3/3")
+Model=tf.keras.models.load_model("../Models/Models/4")
 
 className=["glioma_tumor","meningioma_tumor","no_tumor","pituitary_tumor"]
 app=FastAPI()
