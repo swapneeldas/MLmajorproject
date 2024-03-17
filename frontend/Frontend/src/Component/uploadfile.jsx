@@ -38,6 +38,7 @@ const uploadfile = () => {
       }
       return(
 <>
+<h1 className='header'>PREDICTION</h1>
 <div {...getRootProps()} className='imagediv'>
              {(preview===null)?
              <div>
@@ -45,7 +46,7 @@ const uploadfile = () => {
               {
                 isDragActive ?
                   <p>Drop the files here ...</p> :
-                  <p>Drag 'n' drop some files here, or click to select files</p>
+                  <p>DROP OR CHOOSE MRI SCAN</p>
               }
 
              </div>:<div className='center'>
