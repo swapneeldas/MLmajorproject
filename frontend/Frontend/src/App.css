@@ -6,8 +6,9 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background-color: rgba(39, 39, 161, 0.379);
+    background-color: rgba(8, 2, 57, 0.379);
     box-shadow: rgba(0, 0, 0, 0.414) 0px 5px 15px;
+   
 }
 .header{
     color:aliceblue;
@@ -21,15 +22,32 @@
     color: antiquewhite;
     transform: scale(1.2);
 }
+.R{
+    margin: 0 13px;
+    color: black;
+    font-weight: 500;
+    font-family: "Glory", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.Ractive{
+    margin: 0 13px;
+    font-weight: 500;
+    font-family: "Glory", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: antiquewhite;
+    transform: scale(1.2);
+}
 .logo{
-    max-width: 50px;
-    max-height: 50px;
+    width: 60px;
+    max-height: 40px;
 }
    
 .imagediv{
     margin: 50px auto 20px auto;
-    width: 500px;
-    height: 350px;
+    width: 400px;
+    height: 300px;
     display: grid;
     place-items: center;
     border-radius: 5px;
@@ -56,16 +74,7 @@
     overflow: hidden;
 } 
 
-.R{
-    margin: 0 10px 0 10px;
-    color: black;
-    font-weight: 500;
-}
-.Ractive{
-    margin: 0 10px 0 10px;
-    color: antiquewhite;
-    transform: scale(1.2);
-}
+
 body{
     background-image: url("./assets/milad-fakurian-58Z17lnVS4U-unsplash.jpg");
      background-repeat: no-repeat;
@@ -83,11 +92,92 @@ body{
     height: 100%;
 }
 .data{
-    background-color: rgba(255, 255, 255, 0.382);
-    width: 250px;
+    margin-top: 50px;
+    margin-left: 100px;
+    display: flex;
+    color:white;
+}
+.verticalline{
+    height: 100%;
+    width: 3px;
+    border-radius: 100%;
+    background-color: whitesmoke;
+}
+.innersection{
+    width: 90%;
     margin: auto;
-    padding: 30px;
-    border-radius: 20px;
-    backdrop-filter: blur(1px);
     
+}
+.section{
+    display: grid;
+    place-content: center;
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.482);
+    padding-bottom:30px ;
+    margin-bottom: 40px;
+    backdrop-filter: blur(2px);
+}
+.heading{
+    margin: 10px 15px;
+    margin-bottom: 30px;
+    color: #FFFFFF;
+}
+.para{
+    margin: 10px 15px ;
+    color: #FFFFFF;
+    font-size: 19px;
+}
+.subheading{
+    color: #FFFFFF;
+    margin: 3% 15px ;
+}
+.TIObutton{
+    background-color: #E2A9EC;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 15px ;
+    color: black;
+}
+.middleline{
+    width: 60%;
+    margin: auto;
+    color: whitesmoke;
+    border-radius: 100%;
+}
+.predictdiv{
+    display: flex;
+    margin-left: 100px ;
+    flex-direction: column;
+    transition: al 1s;
+}
+.predictdivdata{
+    display: flex;
+    margin-left: 100px ;
+    flex-direction: row;
+    transition: al 1s;
+}
+.btndiv{
+    height: fit-content;
+    display: grid;
+    place-items: center;
+}
+.target{
+    color: whitesmoke;
+    margin: 5px 20px;
+}
+.sub-sub-heading{
+    color: #FFFFFF;
+    margin: 10px 15px ;
+    font-size: 20px;
+}
+.innerdata{
+    background-color: linear-gradient(rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.2));
+    background: linear-gradient(to right,rgba(0, 0, 0, 0.62), rgba(0, 0, 0, 0.1));
+    height: fit-content;
+    width: fit-content;
+    max-width: 90%;
+    margin: 30px 0 0 10px;
+    padding:20px;
+    border-radius: 5px;
 }
