@@ -5,7 +5,7 @@ import './index.css'
 import Uploadfile from './Component/uploadfile.jsx'
 import {Route, RouterProvider, createBrowserRouter, createRoutesFromElements} from 'react-router-dom'
 import Aboutus from './Component/Aboutus.jsx'
-import Info from './Component/info.jsx'
+import Home from './Component/home.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -20,8 +20,8 @@ const router = createBrowserRouter([
         element: <Aboutus />
       },
       {
-        path: "info",
-        element: <Info/>
+        path: "home",
+        element: <Home/>
       }
     ]
   }

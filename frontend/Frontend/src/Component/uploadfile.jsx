@@ -39,6 +39,22 @@ const uploadfile = () => {
       return(
 <>
 <h1 className='header'>PREDICTION</h1>
+<div className='center'>
+  
+</div>
+{(data!==null)&&(
+                <div className='center data'>
+                <div>
+                {
+                  (parseFloat(data.confidence*100).toPrecision(3)<65)?<p>Can't read the image properly</p>:<div>
+                  <div className='center'>{data.disease}</div>
+                <div>{parseFloat(data.confidence*100).toPrecision(3)}</div>
+                  </div>
+                }
+             
+                </div>
+                </div>)
+              }
 <div {...getRootProps()} className='imagediv'>
              {(preview===null)?
              <div>
@@ -54,20 +70,15 @@ const uploadfile = () => {
               {
                 isDragActive ?
                   <p>Drop the files here ...</p> :
+                  <div className='imagedivim'>
                   <img src={preview} className='image'></img>
+                  </div>
               }
              </div>
              }
             </div>
               {/* <div className='btn' onClick={handlePridict}>Predict</div> */}
-             {(data!==null)&&(
-                <div className='center'>
-                <div>
-                <div className='center'>{data.disease}</div>
-                <div>{data.confidence}</div>
-                </div>
-                </div>)
-              }
+            
               <div className='center'>
               <Button variant="outlined" color='primary' sx={{
                 background:"black",

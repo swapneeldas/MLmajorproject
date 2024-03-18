@@ -6,12 +6,13 @@ const Navbar = () => {
     <div className='Navbar'>
       <div ><img src={logo} className='logo'></img></div>
       <div className='rightSide'>
+      <NavLink to={'/home'} className={({isActive}) =>` ${isActive ? "Ractive" : "R"}`}>
+          Home
+          </NavLink>
       <NavLink to={'/'} className={({isActive}) =>` ${isActive ? "Ractive" : "R"}`}>
           Predict
           </NavLink>
-      <NavLink to={'/info'} className={({isActive}) =>` ${isActive ? "Ractive" : "R"}`}>
-          Info
-          </NavLink>
+      
       <NavLink to={'/about'} className={({isActive}) =>` ${isActive ? "Ractive" : "R"}`}>
           About Us
           </NavLink>
