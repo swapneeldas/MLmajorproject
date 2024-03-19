@@ -13,15 +13,15 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <Uploadfile/>
+        element: <Home/>
       },
       {
         path: "about",
         element: <Aboutus />
       },
       {
-        path: "home",
-        element: <Home/>
+        path: "predict",
+        element: <Uploadfile/>
       }
     ]
   }
