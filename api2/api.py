@@ -11,7 +11,7 @@ import tensorflow as tf
 # from tensorflow.keras.preprocessing import image
 Model=tf.keras.models.load_model("../Models/Models/4")
 
-className=["glioma_tumor","meningioma_tumor","no_tumor","pituitary_tumor"]
+className=["Glioma Tumor","Meningioma Tumor","No Tumor","Pituitary Tumor"]
 app=FastAPI()
 app.add_middleware(
     CORSMiddleware,
