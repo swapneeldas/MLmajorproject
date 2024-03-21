@@ -190,12 +190,13 @@ body{
 
 .about_container{
     background-color: rgba(0, 0, 0, 0.444);
-    
+    height: fit-content;   
+    margin-bottom: 35px; 
 }
 
 .aboutheading{
     color:aliceblue;
-    margin: 60px 0px;
+    margin: 50px 0px;
     text-align: center;
 }
 
@@ -203,7 +204,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    padding: 50px 75px;
+    padding: 35px 60px;
 }
 
 .people{
@@ -238,4 +239,7 @@ body{
 }
 .ekta{
     background-image: url(assets/ektaphoto.jpg);
+}
+.swapneel{
+    background-image: url(assets/swapneelImg.jpeg);
 }

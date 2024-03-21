@@ -24,8 +24,8 @@ const Aboutus = () => {
              <p><b>Enrollment Number : </b>12021004006044</p>
             </div>
           </div>
-          <div className="people swapneel">
-            <div className="circle"></div>  
+          <div className="people">
+            <div className="circle swapneel"></div>  
             <div className="person_info">
              <p><b>Name : </b>Swapneel Das</p>
              <p><b>Enrollment Number : </b>12021004006002</p>
