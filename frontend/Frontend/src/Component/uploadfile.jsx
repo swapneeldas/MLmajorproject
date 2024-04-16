@@ -11,6 +11,8 @@ let tumourData={
 
   "No Tumor":"Our model analysis indicates that there is no tumor present in this MRI scan. You are in the clear and can rest assured about your health."
 }
+
+
 const uploadfile = () => {
     const onDrop = useCallback((acceptedFiles) => {
         const file = new FileReader;
@@ -26,7 +28,7 @@ const uploadfile = () => {
       const { acceptedFiles, getRootProps, getInputProps, isDragActive } = useDropzone({
         onDrop
       });
-     let [data,setdata]=useState(null);
+      let [data,setdata]=useState(null);
       const [preview, setPreview] = useState(null);
     
       /**
@@ -49,8 +51,8 @@ const uploadfile = () => {
 <>
 <h1 className='header'>PREDICTION</h1>
 
-<div className={data !== null ? "predictdivdata" : "predictdiv"}>
-<div>
+<div className="predictdivdata">
+<div className={`uploadimage ${(data)?"uploadimagepredict":" "}`}>
 <div {...getRootProps()} className='imagediv'>
              {(preview===null)?
              <div>
@@ -73,18 +75,20 @@ const uploadfile = () => {
              </div>
              }
             </div>
-              {/* <div className='btn' onClick={handlePridict}>Predict</div> */}
             
               <div className='btndiv'>
               <Button variant="outlined" color='primary' sx={{
                 background:"black",
-                color:"white"
+                color:"white",
+                '&:hover': {
+              backgroundColor: 'blue',
+  },
               }} onClick={handlePridict}>Predict</Button>
               </div>
               </div>
-              
+              <div className={`notactive ${data ? 'active ' : ''}`}>
               {(data!==null)&&(
-<div className='data'>
+<div className={`data`}>
 <div className='verticalline'></div>
   <div className='innerdata'>
   {
@@ -102,44 +106,9 @@ const uploadfile = () => {
   </div>
   </div> 
               )}
-
-
-              {/* {(data!==null)&&(
-                <div className='center data'>
-                <div>
-                {
-                  (parseFloat(data.confidence*100).toPrecision(3)<65)?<p>Can't read the image properly</p>:<div>
-                  <div className='center'>{data.disease}</div>
-                <div>{parseFloat(data.confidence*100).toPrecision(3)}</div>
-                  </div>
-                }
-             
-                </div>
-                </div>)
-                
-               */}
-              
-
+              </div>
               </div>
 </>
       );
 }
-
 export default uploadfile
-{/* <div className='data'>
-<div className='verticalline'></div>
-  <div className='innerdata'>
-  {
-    (false)?<p>Can't read the image properly</p>:
-    <div>
-    <div className='target'>Predicted Result:- Brain tumour</div>
-    <div className='target'>Confidence:- 100%</div>
-    <p className='dataheader target'>Extra Info</p>
-    <p className='datapara target'>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    </div>
-  }
-
-  </div>
-  </div> */}

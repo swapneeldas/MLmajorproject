@@ -2,14 +2,12 @@ from fastapi import FastAPI,File,UploadFile
 import uvicorn
 import cv2
 import numpy as np
-from io import BytesIO
 from PIL import Image
 from fastapi.middleware.cors import CORSMiddleware
 
-
 import tensorflow as tf
 # from tensorflow.keras.preprocessing import image
-Model=tf.keras.models.load_model("../Models/Models/20e/20e")
+Model=tf.keras.models.load_model("../Models/Models/model35e/2")
 className=["Glioma Tumor","Meningioma Tumor","No Tumor","Pituitary Tumor"]
 app=FastAPI()
 app.add_middleware(
@@ -20,25 +18,17 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
-@app.get("/hello/{something}")
-async def hello(something):
-    return f"welcome {something}"
-
-
 @app.post("/predict")
 async def predict(
     file:UploadFile = File(...)
 ):
     # Reading uploadedfile as bytes
     contents = await file.read()
-
     #Conver bytes to numpy array representing image
     nparr=np.frombuffer(contents, np.uint8)
     img=cv2.imdecode(nparr,cv2.IMREAD_COLOR)
-
     #Resize image
     img=cv2.resize(img,(150,150))
-
     #Converting array to numpy array for model
     img_array =np.array(img)
     #reshapng image for model
